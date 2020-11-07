@@ -1,6 +1,7 @@
 import React from'react';
 import BarChart from'./components/BarChart';
 import LineChart from'./components/LineChart';
+import RadarChart from'./components/RadarChart';
 import './App.css';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
     <div>
         <BarChart />
         <LineChart />
+        <RadarChart />
     </div>
   )
 }

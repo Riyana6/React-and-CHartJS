@@ -1,9 +1,9 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2'
+import { Pie } from 'react-chartjs-2'
 
-const LineChart = () => {
+const PieChart = () => {
     return <div>
-        <Line
+        <Pie
             data={{
                 labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],            
                 datasets: [{
@@ -18,11 +18,6 @@ const LineChart = () => {
                         'rgba(255, 159, 64, 1)'
                     ],
                     borderWidth: 1
-                },
-                {
-                    label: 'Quantity',
-                    data: [20,25,10,0,5,12],
-                    borderColor: 'red'
                 }
                 ], 
             }}
@@ -33,4 +28,4 @@ const LineChart = () => {
     </div>
 }
 
-export default LineChart;
+export default PieChart;
