@@ -28,4 +28,4 @@ const RadarChart = () => {
     </div>
 }
 
-export default RadarChart;
+export default RadarChart; 
