@@ -13,13 +13,13 @@ const App = () => {
   return (
     <div>
         <BarChart />
-        <LineChart />
+        {/*<LineChart />
         <RadarChart />
         <PieChart />
         <DoughnutChart />
         <PolarAreaChart />
         <BubbleChart />
-        <ScatterChart />
+        <ScatterChart />*/}
         </div>
   )
 }
