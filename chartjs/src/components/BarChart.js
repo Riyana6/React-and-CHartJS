@@ -52,7 +52,7 @@ import contacts from './NAT64_1_20.json';
 
 const BarChart = () => {
     
-        render  (
+        render  
             (contacts.map(el => {
                 return(
             <div>
