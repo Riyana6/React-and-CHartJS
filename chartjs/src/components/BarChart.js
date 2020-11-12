@@ -48,18 +48,18 @@ export default BarChart;*/
 
 import React from 'react';
 import { Bar } from 'react-chartjs-2'
-import Data from  './data/data.json'
+ 
 
 const BarChart = () => {
-    Data.map( ( Data) =>{
+
         return  (
             <div>
                 <Bar
                     data={{
-                        labels:[Data.Length],            
+                        labels:[],            
                         datasets: [{
                             label: '# of Votes',
-                            data: [Data.Time]
+                            data: []
                         }], 
                     }}
                     height={400}
@@ -69,6 +69,5 @@ const BarChart = () => {
             </div>
         )
     }
-)}
 
 export default BarChart;
