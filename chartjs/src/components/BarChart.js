@@ -46,20 +46,22 @@ export default BarChart;*/
 
 
 
-import React from 'react';
+import React , {render} from 'react';
 import { Bar } from 'react-chartjs-2'
- 
+import contacts from './NAT64_1_20.json';
 
 const BarChart = () => {
-
-        return  (
+    
+        render  (
+            (contacts.map(el => {
+                return(
             <div>
                 <Bar
                     data={{
-                        labels:[],            
+                        labels:[el.Length],            
                         datasets: [{
                             label: '# of Votes',
-                            data: []
+                            data: [el.Time]
                         }], 
                     }}
                     height={400}
@@ -67,7 +69,10 @@ const BarChart = () => {
                     options={{ maintainAspectRatio: false }}
                 />
             </div>
+                )
+            }))
         )
-    }
+    
+}
 
 export default BarChart;
