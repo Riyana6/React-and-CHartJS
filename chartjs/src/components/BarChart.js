@@ -54,7 +54,7 @@ const BarChart = () => {
     
         render  (
             (contacts.map(el => {
-                return(
+                return()
             <div>
                 <Bar
                     data={{
@@ -69,7 +69,6 @@ const BarChart = () => {
                     options={{ maintainAspectRatio: false }}
                 />
             </div>
-                )
             }))
         )
     
