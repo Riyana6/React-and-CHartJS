@@ -52,7 +52,7 @@ import contacts from './NAT64_1_20.json';
 
 const BarChart = () => {
     
-        render  (
+        return  (
             (contacts.map(el => {
             <div>
                 <Bar
@@ -68,7 +68,7 @@ const BarChart = () => {
                     options={{ maintainAspectRatio: false }}
                 />
             </div>
-            }))
+            })
         )
     
 }
