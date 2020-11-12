@@ -54,7 +54,6 @@ const BarChart = () => {
     
         render  (
             (contacts.map(el => {
-                return()
             <div>
                 <Bar
                     data={{
