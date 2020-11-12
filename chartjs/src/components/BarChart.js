@@ -46,13 +46,13 @@ export default BarChart;*/
 
 
 
-import React , {render} from 'react';
+import React , render from 'react';
 import { Bar } from 'react-chartjs-2'
 import contacts from './NAT64_1_20.json';
 
 const BarChart = () => {
     
-        render  
+        render  (
             (contacts.map(el => {
                 return(
             <div>
