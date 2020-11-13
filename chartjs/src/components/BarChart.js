@@ -52,7 +52,7 @@ import contacts from './NAT64_1_20.json';
 
 export default class BarChart extends React.Component {
     render(){
-        return ()
+        return
         const BarChart = (contacts.map(el => {
     
             return  ( 
