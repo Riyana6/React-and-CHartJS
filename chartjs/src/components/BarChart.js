@@ -50,7 +50,6 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2'
 import contacts from './NAT64_1_20.json';
 
-
 const BarChart = (contacts.map(el => {
     
         return  ( 
@@ -72,3 +71,4 @@ const BarChart = (contacts.map(el => {
     })
 )
 
+export default BarChart;
