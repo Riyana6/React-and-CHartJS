@@ -52,26 +52,26 @@ import contacts from './NAT64_1_20.json';
 
 export default class BarChart extends React.Component {
     render(){
-        return (
-            const BarChart = (contacts.map(el => {
-        
-                return  ( 
-                    <div>
-                        <Bar
-                            data={{
-                                labels:JSON.stringify([el.Length]),            
-                                datasets: [{
-                                    label: '# of Votes',
-                                    data: JSON.stringify([el.source])
-                                }], 
-                            }}
-                            height={400}
-                            width={600}
-                            options={{ maintainAspectRatio: false }}
-                        />
-                    </div>
-                )
-            })
+        return ()
+        const BarChart = (contacts.map(el => {
+    
+            return  ( 
+                <div>
+                    <Bar
+                        data={{
+                            labels:JSON.stringify([el.Length]),            
+                            datasets: [{
+                                label: '# of Votes',
+                                data: JSON.stringify([el.source])
+                            }], 
+                        }}
+                        height={400}
+                        width={600}
+                        options={{ maintainAspectRatio: false }}
+                    />
+                </div>
+            )
+        })
     )
     
     }
