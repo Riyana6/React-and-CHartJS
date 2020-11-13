@@ -50,25 +50,30 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2'
 import contacts from './NAT64_1_20.json';
 
-const BarChart = (contacts.map(el => {
-    
-        return  ( 
-            <div>
-                <Bar
-                    data={{
-                        labels:[el.Length],            
-                        datasets: [{
-                            label: '# of Votes',
-                            data: [el.Time]
-                        }], 
-                    }}
-                    height={400}
-                    width={600}
-                    options={{ maintainAspectRatio: false }}
-                />
-            </div>
+export default class BarChart extends React.Component {
+    render(){
+        return (
+            (contacts.map(el => {
+        
+                
+                    <div>
+                        <Bar
+                            data={{
+                                labels:JSON.stringify([el.Length]),            
+                                datasets: [{
+                                    label: '# of Votes',
+                                    data: JSON.stringify([el.source])
+                                }], 
+                            }}
+                            height={400}
+                            width={600}
+                            options={{ maintainAspectRatio: false }}
+                        />
+                    </div>
+                
+            }))
         )
-    })
-)
+    
+    }
 
-export default BarChart;
+}
