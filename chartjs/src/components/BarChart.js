@@ -53,9 +53,9 @@ import contacts from './NAT64_1_20.json';
 export default class BarChart extends React.Component {
     render(){
         return (
-            (contacts.map(el => {
+            const BarChart = (contacts.map(el => {
         
-                
+                return  ( 
                     <div>
                         <Bar
                             data={{
@@ -70,9 +70,9 @@ export default class BarChart extends React.Component {
                             options={{ maintainAspectRatio: false }}
                         />
                     </div>
-                
-            }))
-        )
+                )
+            })
+    )
     
     }
 
