@@ -48,7 +48,7 @@ export default BarChart;*/
 
 import React from 'react';
 import { Bar } from 'react-chartjs-2'
-import {data} from './NAT64_1_20.json';
+const exportdata from './NAT64_1_20.json';
 
 const BarChart = (data.map(el => {
         return  ( 
