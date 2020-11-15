@@ -48,18 +48,18 @@ export default BarChart;*/
 
 import React from 'react';
 import { Bar } from 'react-chartjs-2'
-import contacts from './NAT64_1_20.json';
+import data from './NAT64_1_20.json';
 
-const BarChart = (contacts.map(el => {
+const BarChart = (data.map(el => {
     
         return  ( 
             <div>
                 <Bar
                     data={{
-                        labels:JSON.stringify([el.Length]),            
+                        labels:el.Length,            
                         datasets: [{
                             label: '# of Votes',
-                            data: JSON.stringify([el.source])
+                            data: el.source
                         }], 
                     }}
                     height={400}
