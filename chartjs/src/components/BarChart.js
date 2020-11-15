@@ -51,15 +51,14 @@ import { Bar } from 'react-chartjs-2'
 import data from './NAT64_1_20.json';
 
 const BarChart = (data.map(el => {
-    
         return  ( 
             <div>
                 <Bar
                     data={{
-                        labels:el.Length,            
+                        labels:JSON.stringify(el.Length),            
                         datasets: [{
                             label: '# of Votes',
-                            data: el.source
+                            data:JSON.stringify(el.source)
                         }], 
                     }}
                     height={400}
