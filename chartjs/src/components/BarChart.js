@@ -52,26 +52,32 @@ import { Bar } from 'react-chartjs-2'
 const FileSystem = require("fs");
 const source = JSON.parse(FileSystem.readFileSync('./NAT64_1_20.json'));
 
-const BarChart = (source.map(el => {
-        return  ( 
-            <div>
-                <Bar
-                    data={{
-                        labels:JSON.stringify(el.Length),            
-                        datasets: [{
-                            label: '# of Votes',
-                            data:JSON.stringify(el.source)
-                        }], 
-                    }}
-                    height={400}
-                    width={600}
-                    options={{ maintainAspectRatio: false }}
+(async () => {
+    try {
+        const BarChart = (source.map(el => {
+                return  ( 
+                    <div>
+                        <Bar
+                            data={{
+                                labels:JSON.stringify(el.Length),            
+                                datasets: [{
+                                    label: '# of Votes',
+                                    data:JSON.stringify(el.source)
+                                }], 
+                            }}
+                            height={400}
+                            width={600}
+                            options={{ maintainAspectRatio: false }}
+                            
+                        />
+                    </div>
                     
-                />
-            </div>
-            
-        )
-    })
-)
+                )
+            })
+        );
+        export default BarChart;
+    } catch (err) {
+        console.log(err);
+    }
+});
 
-export default BarChart;
