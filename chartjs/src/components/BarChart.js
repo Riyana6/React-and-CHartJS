@@ -49,10 +49,10 @@ export default BarChart;*/
 import React from 'react';
 import { Bar } from 'react-chartjs-2'
 //import LogData from './NAT64_1_20.json';
-const FileSystem = require("fs");
-const source = JSON.parse(FileSystem.readFileSync('./NAT64_1_20.json'))
 
-async BarChart = (source.map(el => {
+import source from './NAT64_1_20.json';
+
+const BarChart = (source.map(el => {
     return  ( 
         <div>
             <Bar
@@ -69,8 +69,8 @@ async BarChart = (source.map(el => {
                 
             />
         </div>
-        
     )
+}))
 
        
 export default BarChart;
