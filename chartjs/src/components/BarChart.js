@@ -46,32 +46,58 @@ export default BarChart;*/
 
 
 
-import React from 'react';
-import { Bar } from 'react-chartjs-2'
+import React, { useState, useEffect } from 'react';
+import { HorizontalBar } from 'react-chartjs-2'
 
 
 import LogData from './NAT64_1_20.json';
 
-const BarChart = (LogData.map(el => {
+const HorizontalBarChart = ()=> {
+
+    const [labels, setLabels] = useState([]);
+    const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() =>  {
+        if(loading){
+            const tempData = [];
+            const tempLabels = [];
+            for(let i=0; i< LogData.length; i++){
+                tempData.push(parseInt(LogData[i].Destination, 10));
+                tempLabels.push(LogData[i].Source);
+            }
+            setData(tempData);
+            setLabels(tempLabels);
+            setLoading(false);
+            // LogData.forEach(e => {
+            //     console.log(1)
+            //     setData([...data, parseInt(e.Length, 10)]);
+            //     setLabels([...labels, e.Source]);
+            // })
+        }
+    })
+ 
     return  ( 
         <div>
-            <Bar
+            <HorizontalBar
                 data={{
-                    labels:JSON.stringify(el.Length),            
+                    labels:labels,            
                     datasets: [{
                         label: '# of Votes',
-                        data:JSON.stringify(el.source)
+                        data:data,
+                        backgroundColor: 'light blue',
+                        borderColor: 'red'
                     }], 
                 }}
-                height={400}
-                width={600}
+                height={2000}
+                width={500}
                 options={{ maintainAspectRatio: false }}
                 
             />
         </div>
     )
-}))
+}
 
        
-export default BarChart;
+export default HorizontalBarChart;
 
