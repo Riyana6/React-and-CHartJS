@@ -48,11 +48,11 @@ export default BarChart;*/
 
 import React from 'react';
 import { Bar } from 'react-chartjs-2'
-//import LogData from './NAT64_1_20.json';
 
-import source from './NAT64_1_20.json';
 
-const BarChart = (source.map(el => {
+import LogData from './NAT64_1_20.json';
+
+const BarChart = (LogData.map(el => {
     return  ( 
         <div>
             <Bar
