@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
         <BarChart />
-        /*<LineChart />
+        {/*<LineChart />
         <RadarChart />
         <PieChart />
         <DoughnutChart />
