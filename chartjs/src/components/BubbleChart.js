@@ -1,4 +1,4 @@
-mport React from 'react';
+import React from 'react';
 import { Bubble } from 'react-chartjs-2'
 
 const BubbleChart = () => {
