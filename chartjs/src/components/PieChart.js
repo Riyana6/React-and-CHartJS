@@ -1,4 +1,4 @@
-import React from 'react';
+mport React from 'react';
 import { Pie, defaults } from 'react-chartjs-2'
 
 defaults.global.tooltips.enabled= false
